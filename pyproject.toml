@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "py-contact-ms"
+version = "0.1.0"
+description = "Contact Molecular Surface calculation for protein design — a Python port of Longxing Cao's C++ implementation"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.8"
+authors = [
+    {name = "Brian Coventry"},
+]
+keywords = ["protein", "molecular-surface", "contact", "shape-complementarity", "bioinformatics"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+    "Topic :: Scientific/Engineering :: Chemistry",
+]
+dependencies = [
+    "numpy",
+    "scipy",
+]
+
+[project.urls]
+Homepage = "https://github.com/ullahsamee/py_contact_ms"
+Repository = "https://github.com/ullahsamee/py_contact_ms"
+Issues = "https://github.com/ullahsamee/py_contact_ms/issues"
+
+[tool.setuptools.packages.find]
+include = ["py_contact_ms*"]
