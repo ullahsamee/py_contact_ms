@@ -1,5 +1,7 @@
 <img width="784" height="442" alt="image" src="https://github.com/ullahsamee/py_contact_ms/blob/main/test/ms3.png" />
 
+**Description**
+
 Longxing Cao's Contact Molecular Surface has been ported to python to allow the next generation of protein designers to use it with ease. Contact Molecular Surface (contact ms) is based on Lawrence and Colman's 1993 paper where they calculate Shape Complementarity. The difference is that instead of returning a singular value denoting the shape complementarity, contact ms instead returns a distance-weighted surface area of the target molecule.
 
 At it's core, contact ms is based on the following formula:
@@ -10,6 +12,10 @@ Where area is the interfacial area on the target and distance is the distance be
 Here's an image from (Brian) explaining why contact ms is better than SASA or Shape Complementarity:
 <img width="784" height="442" alt="image" src="https://github.com/ullahsamee/py_contact_ms/blob/main/test/ms.png" />
 
+**Installation**
+```bash
+pip install py-contact-ms
+```
 
 In terms of using this library, there are really only two functions you need:
 ```python
