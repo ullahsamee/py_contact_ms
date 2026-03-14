@@ -5,10 +5,8 @@ At it's core, contact ms is based on the following formula:
 
 Where area is the interfacial area on the target and distance is the distance between the binder and the target (from the molecular surfaces) at that point.
 
-Here's an image from (Brian Coventry dissertation) explaining why contact ms is better than SASA or Shape Complementarity:
-<img width="784" height="442" alt="image" src="https://github.com/user-attachments/assets/a05ec752-9b92-4e95-a6dc-14b60129693a" />
-
-(Look up Brian Coventry Dissertation if you want the full story about it's pros and cons)
+Here's an image from (Brian) explaining why contact ms is better than SASA or Shape Complementarity:
+<img width="784" height="442" alt="image" src="https://github.com/ullahsamee/py_contact_ms/blob/main/test/ms.png" />
 
 
 In terms of using this library, there are really only two functions you need:
