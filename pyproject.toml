@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "py-contact-ms"
-version = "0.1.0"
+version = "0.1.1"
 description = "Contact Molecular Surface calculation for protein design — a Python port of Longxing Cao's C++ implementation"
 readme = "README.md"
 license = "MIT"

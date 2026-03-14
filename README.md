@@ -5,10 +5,7 @@ At it's core, contact ms is based on the following formula:
 
 Where area is the interfacial area on the target and distance is the distance between the binder and the target (from the molecular surfaces) at that point.
 
-Perhaps the coolest new thing the python version brings is per-atom contact ms! I always thought this was a dubious idea but it actually turns out its very straightforward based on the math.
-
-
-Here's an image from my PhD explaining why contact ms is better than SASA or Shape Complementarity:
+Here's an image from (Brian Coventry dissertation) explaining why contact ms is better than SASA or Shape Complementarity:
 <img width="784" height="442" alt="image" src="https://github.com/user-attachments/assets/a05ec752-9b92-4e95-a6dc-14b60129693a" />
 
 (Look up Brian Coventry Dissertation if you want the full story about it's pros and cons)
@@ -41,5 +38,3 @@ from py_contact_ms import calculate_maximum_possible_contact_ms
 max_target_cms, max_target_cms_per_atom = calculate_maximum_possible_contact_ms(target_xyz, target_radii)
 ```
 
-
-Many thanks the Claude and ChatGPT for making this herculean effort possible (in like 20 hours which is insane)

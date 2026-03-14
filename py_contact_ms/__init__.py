@@ -4,7 +4,7 @@ py_contact_ms — Contact Molecular Surface for Python
 Ported from Longxing Cao's C++ implementation. Based on Lawrence & Colman (1993).
 """
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 
 from py_contact_ms._core import (
     calculate_contact_ms,
