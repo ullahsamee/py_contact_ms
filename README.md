@@ -116,3 +116,80 @@ max_target_cms, max_target_cms_per_atom = calculate_maximum_possible_contact_ms(
  
 ---
 
+## Example: Protein–Protein Complex
+Assume:
+Chain A = target receptor
+Chain B = binder
+```bash
+import numpy as np
+from Bio.PDB import PDBParser
+from py_contact_ms import calculate_contact_ms
+from py_contact_ms import get_radii_from_names
+
+pdb_file = "design_complex.pdb"
+
+parser = PDBParser(QUIET=True)
+structure = parser.get_structure("complex", pdb_file)
+
+binder_xyz = []
+binder_res = []
+binder_atoms = []
+
+target_xyz = []
+target_res = []
+target_atoms = []
+
+for atom in structure.get_atoms():
+
+    # Skip hydrogens
+    if atom.element == "H":
+        continue
+
+    residue = atom.get_parent()
+    chain = residue.get_parent().id
+
+    coord = atom.coord
+    resname = residue.resname
+    atomname = atom.name.strip()
+
+    # Binder peptide
+    if chain == "B":
+        binder_xyz.append(coord)
+        binder_res.append(resname)
+        binder_atoms.append(atomname)
+
+    # Target receptor
+    elif chain == "A":
+        target_xyz.append(coord)
+        target_res.append(resname)
+        target_atoms.append(atomname)
+
+binder_xyz = np.array(binder_xyz)
+target_xyz = np.array(target_xyz)
+
+binder_radii = get_radii_from_names(
+    binder_res,
+    binder_atoms
+)
+
+target_radii = get_radii_from_names(
+    target_res,
+    target_atoms
+)
+
+contact_ms, per_atom_cms, calc = calculate_contact_ms(
+    binder_xyz,
+    binder_radii,
+    target_xyz,
+    target_radii
+)
+
+print("CMS Score:", contact_ms)
+```
+
+```bash
+==============================
+Contact Molecular Surface
+==============================
+CMS Score: 427.02491532312615
+```
