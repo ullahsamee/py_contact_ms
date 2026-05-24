@@ -162,6 +162,8 @@ for atom in structure.get_atoms():
     coord = atom.coord
     resname = residue.resname
     atomname = atom.name.strip()
+if atom.element == "H" or atomname.startswith("H") or (len(atomname) > 1 and atomname[0].isdigit() and atomname[1] == "H"):
+    continue
 
     # Binder peptide
     if chain == "B":
