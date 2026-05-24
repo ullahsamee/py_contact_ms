@@ -47,6 +47,17 @@ Contact MS correctly penalizes gaps via the exponential term, producing a metric
 ```bash
 pip install py-contact-ms
 ```
+## Recommended Installation (Virtual Environment)
+
+```bash
+git clone https://github.com/ullahsamee/py_contact_ms.git
+cd py_contact_ms
+
+python3 -m venv venv
+source venv/bin/activate
+
+pip install -e .
+```
 
 ## Usage
 
