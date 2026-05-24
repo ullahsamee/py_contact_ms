@@ -127,11 +127,11 @@ max_target_cms, max_target_cms_per_atom = calculate_maximum_possible_contact_ms(
  
 ---
 
-## Example: Protein–Protein Complex
-Assume:
+## Example: Protein–Protein Complex (run_cms.py) <-- save file and run.
+I assume:
 Chain A = target receptor
 Chain B = binder
-```bash
+```python
 import numpy as np
 from Bio.PDB import PDBParser
 from py_contact_ms import calculate_contact_ms
@@ -199,8 +199,8 @@ print("CMS Score:", contact_ms)
 ```
 
 ```bash
-==============================
-Contact Molecular Surface
-==============================
+===============================
+Contact Molecular Surface (CMS)
+===============================
 CMS Score: 427.02491532312615
 ```
